@@ -1,0 +1,12 @@
+name: "demo action"
+description: "demo action"
+
+inputs:
+  name:
+    required: true
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.name }}
